@@ -24,14 +24,14 @@
       --shadow: 0 8px 16px rgba(139, 69, 19, 0.15);
       --transition: all 0.3s ease;
     }
-
+    
     /* ===== Reset & Base ===== */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
+    
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: var(--light);
@@ -41,25 +41,25 @@
       background-size: cover;
       background-attachment: fixed;
     }
-
+    
     a {
       text-decoration: none;
       color: inherit;
     }
-
+    
     img {
       max-width: 100%;
       height: auto;
       border-radius: 12px;
       box-shadow: var(--shadow);
     }
-
+    
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 20px;
     }
-
+    
     .btn {
       display: inline-block;
       padding: 14px 28px;
@@ -73,16 +73,16 @@
       letter-spacing: 1px;
       font-size: 14px;
     }
-
+    
     .btn:hover {
       transform: translateY(-3px);
       box-shadow: 0 12px 20px rgba(255, 107, 53, 0.2);
     }
-
+    
     .section {
       padding: 80px 0;
     }
-
+    
     .section-title {
       text-align: center;
       font-size: 2.5rem;
@@ -91,7 +91,7 @@
       position: relative;
       font-weight: 700;
     }
-
+    
     .section-title::after {
       content: "";
       display: block;
@@ -101,7 +101,7 @@
       margin: 15px auto;
       border-radius: 2px;
     }
-
+    
     /* ===== Header ===== */
     header {
       background-color: rgba(255, 255, 255, 0.95);
@@ -110,20 +110,20 @@
       z-index: 1000;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
-
+    
     .header-content {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 20px 0;
     }
-
+    
     .logo {
       display: flex;
       align-items: center;
       gap: 12px;
     }
-
+    
     .logo img {
       width: 60px;
       height: 60px;
@@ -131,26 +131,26 @@
       object-fit: cover;
       border: 3px solid var(--accent);
     }
-
+    
     .logo h1 {
       font-size: 1.8rem;
       color: var(--primary);
       font-weight: 700;
     }
-
+    
     .logo span {
       display: block;
       font-size: 0.9rem;
       color: var(--secondary);
       font-weight: 400;
     }
-
+    
     nav ul {
       list-style: none;
       display: flex;
       gap: 30px;
     }
-
+    
     nav a {
       font-weight: 600;
       color: var(--text);
@@ -158,7 +158,7 @@
       padding-bottom: 5px;
       transition: var(--transition);
     }
-
+    
     nav a::after {
       content: '';
       position: absolute;
@@ -169,15 +169,40 @@
       background-color: var(--accent);
       transition: var(--transition);
     }
-
+    
     nav a:hover {
       color: var(--accent);
     }
-
+    
     nav a:hover::after {
       width: 100%;
     }
-
+    
+    /* ===== Language Switcher ===== */
+    .language-switcher {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .lang-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.2rem;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: var(--transition);
+    }
+    
+    .lang-btn.active {
+      background-color: var(--primary);
+      color: white;
+    }
+    
+    .lang-btn:hover {
+      background-color: var(--light);
+    }
+    
     /* ===== Hero ===== */
     .hero {
       background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://resizer.otstatic.com/v2/photos/wide-medium/2/58404929.png') center/cover no-repeat;
@@ -185,29 +210,29 @@
       text-align: center;
       padding: 150px 0;
     }
-
+    
     .hero h2 {
       font-size: 3.5rem;
       margin-bottom: 20px;
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     }
-
+    
     .hero p {
       font-size: 1.3rem;
       max-width: 700px;
       margin: 0 auto 30px;
       text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
     }
-
+    
     .hero .btn {
       background-color: var(--gold);
       color: var(--white);
     }
-
+    
     .hero .btn:hover {
       background-color: var(--accent);
     }
-
+    
     /* ===== About ===== */
     .about-content {
       display: flex;
@@ -215,28 +240,28 @@
       gap: 50px;
       flex-wrap: wrap;
     }
-
+    
     .about-text {
       flex: 1;
       min-width: 300px;
     }
-
+    
     .about-text h3 {
       font-size: 1.8rem;
       color: var(--primary);
       margin-bottom: 20px;
     }
-
+    
     .about-text p {
       margin-bottom: 15px;
       font-size: 1.1rem;
     }
-
+    
     .about-text p:last-child {
       font-style: italic;
       color: var(--secondary);
     }
-
+    
     .about-image {
       flex: 1;
       min-width: 300px;
@@ -244,11 +269,11 @@
       overflow: hidden;
       box-shadow: var(--shadow);
     }
-
+    
     .about-image img {
       border-radius: 20px;
     }
-
+    
     /* ===== Hours ===== */
     .hours {
       background-color: var(--white);
@@ -259,18 +284,18 @@
       margin: 0 auto;
       box-shadow: var(--shadow);
     }
-
+    
     .hours h3 {
       font-size: 1.5rem;
       color: var(--primary);
       margin-bottom: 20px;
     }
-
+    
     .hours p {
       font-size: 1.2rem;
       color: var(--secondary);
     }
-
+    
     /* ===== Menu ===== */
     .menu-categories {
       display: flex;
@@ -279,7 +304,7 @@
       flex-wrap: wrap;
       margin-bottom: 40px;
     }
-
+    
     .menu-category-btn {
       padding: 10px 20px;
       background-color: var(--white);
@@ -290,19 +315,19 @@
       font-weight: 600;
       transition: var(--transition);
     }
-
+    
     .menu-category-btn.active, .menu-category-btn:hover {
       background-color: var(--secondary);
       color: var(--white);
     }
-
+    
     .menu-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 25px;
       margin-top: 30px;
     }
-
+    
     .menu-item {
       background-color: var(--white);
       border-radius: 15px;
@@ -310,38 +335,38 @@
       box-shadow: var(--shadow);
       transition: var(--transition);
     }
-
+    
     .menu-item:hover {
       transform: translateY(-10px);
     }
-
+    
     .menu-item-header {
       background-color: var(--primary);
       color: var(--white);
       padding: 15px;
       text-align: center;
     }
-
+    
     .menu-item-header h3 {
       font-size: 1.4rem;
       margin-bottom: 5px;
     }
-
+    
     .menu-item-header .price {
       font-size: 1.3rem;
       font-weight: 700;
       color: var(--gold);
     }
-
+    
     .menu-item-body {
       padding: 20px;
     }
-
+    
     .menu-item-body p {
       color: #555;
       font-size: 0.95rem;
     }
-
+    
     .diet-tag {
       display: inline-block;
       padding: 4px 8px;
@@ -351,7 +376,7 @@
       border-radius: 4px;
       margin-top: 10px;
     }
-
+    
     /* ===== WhatsApp Button ===== */
     .whatsapp-float {
       position: fixed;
@@ -368,16 +393,16 @@
       box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
       transition: var(--transition);
     }
-
+    
     .whatsapp-float:hover {
       transform: scale(1.1);
     }
-
+    
     .whatsapp-float i {
       color: white;
       font-size: 28px;
     }
-
+    
     /* ===== Footer ===== */
     footer {
       background-color: var(--primary);
@@ -385,95 +410,95 @@
       padding: 60px 0 30px;
       text-align: center;
     }
-
+    
     .footer-content {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 30px;
     }
-
+    
     .footer-logo {
       font-size: 2rem;
       font-weight: 700;
     }
-
+    
     .footer-logo span {
       display: block;
       font-size: 0.8rem;
       font-weight: 400;
     }
-
+    
     .social-links {
       display: flex;
       gap: 20px;
     }
-
+    
     .social-links a {
       color: var(--white);
       font-size: 1.5rem;
       transition: var(--transition);
     }
-
+    
     .social-links a:hover {
       color: var(--accent);
       transform: translateY(-3px);
     }
-
+    
     .footer-text {
       max-width: 600px;
       font-size: 0.95rem;
       opacity: 0.9;
     }
-
+    
     /* ===== Responsive ===== */
     @media (max-width: 768px) {
       .header-content {
         flex-direction: column;
         gap: 20px;
       }
-
+      
       nav ul {
         gap: 20px;
       }
-
+      
       .hero h2 {
         font-size: 2.5rem;
       }
-
+      
       .hero p {
         font-size: 1.1rem;
       }
-
+      
       .section-title {
         font-size: 2rem;
       }
-
+      
       .about-content {
         flex-direction: column;
       }
     }
-
+    
     @media (max-width: 480px) {
       .menu-grid {
         grid-template-columns: 1fr;
       }
-
+      
       .hero {
         padding: 100px 0;
       }
-
+      
       .hero h2 {
         font-size: 2rem;
       }
-
+      
       .whatsapp-float {
         width: 50px;
         height: 50px;
         right: 20px;
         bottom: 20px;
       }
-
+      
       .whatsapp-float i {
         font-size: 24px;
       }
@@ -501,6 +526,10 @@
             <li><a href="#contacto">Contacto</a></li>
           </ul>
         </nav>
+        <div class="language-switcher">
+          <button class="lang-btn active" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
       </div>
     </div>
   </header>
@@ -508,25 +537,37 @@
   <!-- Hero -->
   <section class="hero" id="inicio">
     <div class="container">
-      <h2>Bruma Café & Croffle</h2>
-      <p>Desayunos y Brunch ancestrales con toque tropical. Croffles sin gluten, cuencos artesanales y bebidas conscientes.</p>
-      <a href="#menu" class="btn">Ver Menú</a>
+      <h2 class="es">Bruma Café & Croffle</h2>
+      <h2 class="en" style="display:none;">Bruma Coffee & Croffle</h2>
+      <p class="es">Desayunos y Brunch ancestrales con toque tropical. Croffles sin gluten, cuencos artesanales y bebidas conscientes.</p>
+      <p class="en" style="display:none;">Ancestral breakfasts and brunch with a tropical touch. Gluten-free croffles, artisanal bowls and mindful drinks.</p>
+      <a href="#menu" class="btn en" style="display:none;">View Menu</a>
     </div>
   </section>
 
   <!-- Nosotros -->
   <section class="section" id="nosotros">
     <div class="container">
-      <h2 class="section-title">Sobre Bruma</h2>
+      <h2 class="section-title es">Sobre Bruma</h2>
+      <h2 class="section-title en" style="display:none;">About Bruma</h2>
       <div class="about-content">
         <div class="about-text">
-          <h3>“Donde el alma se sienta a la mesa”</h3>
-          <p>Bruma no nació en una ciudad, ni en una cocina. Bruma nació en el camino.</p>
-          <p>Nació entre viajes por pueblos donde el humo del maíz todavía danza con el viento, donde las abuelas sazonan con memoria y donde cada ingrediente tiene espíritu. Allí, donde el fogón es altar y el desayuno es ceremonia, fuimos recogiendo lo esencial: el alimento como legado, el sabor como lenguaje, la tierra como maestra.</p>
-          <p>Durante el recorrido, comprendimos que cocinar no es repetir recetas, sino invocar memorias. Que un croffle puede ser una ofrenda, que una bebida puede traer consuelo, que un bowl puede equilibrar el cuerpo y el alma. Así, entre hojas de espinaca, hilos de miel, frutos del bosque y semillas vivas, fue naciendo Bruma.</p>
-          <p>
-          <p><strong>Bruma es eso. Un suspiro entre lo ancestral y lo presente. Una pausa donde el alma también se alimenta.</strong></p>
-          <p style="font-style: normal; margin-top: 20px;"><i class="fas fa-quote-left"></i> Haz tu pedido y deja que la bruma llegue hasta ti. <i class="fas fa-quote-right"></i></p>
+          <h3 class="es">"Donde el alma se sienta a la mesa"</h3>
+          <h3 class="en" style="display:none;">"Where the soul sits at the table"</h3>
+          <p class="es">Bruma no nació en una ciudad, ni en una cocina. Bruma nació en el camino.</p>
+          <p class="en" style="display:none;">Bruma was not born in a city, nor in a kitchen. Bruma was born on the journey.</p>
+          
+          <p class="es">Nació entre viajes por pueblos donde el humo del maíz todavía danza con el viento, donde las abuelas sazonan con memoria y donde cada ingrediente tiene espíritu. Allí, donde el fogón es altar y el desayuno es ceremonia, fuimos recogiendo lo esencial: el alimento como legado, el sabor como lenguaje, la tierra como maestra.</p>
+          <p class="en" style="display:none;">It was born during travels through villages where corn smoke still dances with the wind, where grandmothers season with memory, and where each ingredient has spirit. There, where the stove is an altar and breakfast is a ceremony, we gathered the essentials: food as legacy, flavor as language, the earth as teacher.</p>
+          
+          <p class="es">Durante el recorrido, comprendimos que cocinar no es repetir recetas, sino invocar memorias. Que un croffle puede ser una ofrenda, que una bebida puede traer consuelo, que un bowl puede equilibrar el cuerpo y el alma. Así, entre hojas de espinaca, hilos de miel, frutos del bosque y semillas vivas, fue naciendo Bruma.</p>
+          <p class="en" style="display:none;">Along the way, we understood that cooking is not about repeating recipes, but invoking memories. That a croffle can be an offering, that a drink can bring comfort, that a bowl can balance body and soul. Thus, among spinach leaves, threads of honey, forest fruits, and living seeds, Bruma was born.</p>
+          
+          <p class="es"><strong>Bruma es eso. Un suspiro entre lo ancestral y lo presente. Una pausa donde el alma también se alimenta.</strong></p>
+          <p class="en" style="display:none;"><strong>Bruma is that. A breath between the ancestral and the present. A pause where the soul is also nourished.</strong></p>
+          
+          <p class="es" style="font-style: normal; margin-top: 20px;"><i class="fas fa-quote-left"></i> Haz tu pedido y deja que la bruma llegue hasta ti. <i class="fas fa-quote-right"></i></p>
+          <p class="en" style="font-style: normal; margin-top: 20px; display:none;"><i class="fas fa-quote-left"></i> Place your order and let the mist reach you. <i class="fas fa-quote-right"></i></p>
         </div>
         <div class="about-image">
           <img src="https://www.helios.es/wp-content/uploads/2023/01/helios_blog-ef_brunch-1200x700.jpg" alt="Cocina Ancestral"/>
@@ -535,8 +576,9 @@
 
       <!-- Horarios -->
       <div class="hours">
-        <h3>Horario de Atención</h3>
-        <p><i class="far fa-clock"></i> 8:00 AM - 4:00 PM</p>
+        <h3 class="es">Horario de Atención</h3>
+        <h3 class="en" style="display:none;">Opening Hours</h3>
+        <p><i class="far fa-clock"></i> <span class="es">8:00 AM - 4:00 PM</span><span class="en" style="display:none;">8:00 AM - 4:00 PM</span></p>
       </div>
     </div>
   </section>
@@ -544,21 +586,21 @@
   <!-- Menú -->
   <section class="section" id="menu">
     <div class="container">
-      <h2 class="section-title">Nuestro Menú</h2>
+      <h2 class="section-title es">Nuestro Menú</h2>
+      <h2 class="section-title en" style="display:none;">Our Menu</h2>
       <p style="text-align: center; max-width: 700px; margin: 0 auto 40px;">
-        🌿 Descubre nuestros cuencos artesanales, waffles sin gluten y platos que vienen del monte, del río, del fuego lento y del alma tranquila. 
-        Aquí todo tiene historia. Aquí todo vibra diferente.
-           Domicilios en santa marta
+        <span class="es">🌿 Descubre nuestros cuencos artesanales, waffles sin gluten y platos que vienen del monte, del río, del fuego lento y del alma tranquila. Aquí todo tiene historia. Aquí todo vibra diferente. Domicilios en santa marta</span>
+        <span class="en" style="display:none;">🌿 Discover our artisanal bowls, gluten-free waffles and dishes that come from the mountains, the river, slow fire and peaceful soul. Here everything has history. Here everything vibrates differently. Delivery in Santa Marta</span>
       </p>
 
       <!-- Categorías del Menú -->
       <div class="menu-categories">
-        <button class="menu-category-btn active" data-category="all">Todos</button>
-        <button class="menu-category-btn" data-category="cuencos">Cuencos de Bruma</button>
-        <button class="menu-category-btn" data-category="nidos">Nidos de la Tierra Alta</button>
-        <button class="menu-category-btn" data-category="altares">Altar del Fogón</button>
-        <button class="menu-category-btn" data-category="waffles">Waffles sin Gluten</button>
-        <button class="menu-category-btn" data-category="bebidas">Bebidas</button>
+        <button class="menu-category-btn active" data-category="all"><span class="es">Todos</span><span class="en" style="display:none;">All</span></button>
+        <button class="menu-category-btn" data-category="cuencos"><span class="es">Cuencos de Bruma</span><span class="en" style="display:none;">Bruma Bowls</span></button>
+        <button class="menu-category-btn" data-category="nidos"><span class="es">Nidos de la Tierra Alta</span><span class="en" style="display:none;">Nests of the Highlands</span></button>
+        <button class="menu-category-btn" data-category="altares"><span class="es">Altar del Fogón</span><span class="en" style="display:none;">Stove Altar</span></button>
+        <button class="menu-category-btn" data-category="waffles"><span class="es">Waffles sin Gluten</span><span class="en" style="display:none;">Gluten-Free Waffles</span></button>
+        <button class="menu-category-btn" data-category="bebidas"><span class="es">Bebidas</span><span class="en" style="display:none;">Drinks</span></button>
       </div>
 
       <!-- Grid de Menú -->
@@ -566,331 +608,392 @@
         <!-- Cuencos de Bruma -->
         <div class="menu-item" data-category="cuencos">
           <div class="menu-item-header">
-            <h3>Afrodisiaco tropical</h3>
+            <h3 class="es">Afrodisiaco tropical</h3>
+            <h3 class="en" style="display:none;">Tropical Aphrodisiac</h3>
             <div class="price">$13.000</div>
           </div>
           <div class="menu-item-body">
-            <p>Pera, almendras, miel de ron, fresa</p>
+            <p class="es">Pera, almendras, miel de ron, fresa</p>
+            <p class="en" style="display:none;">Pear, almonds, rum honey, strawberry</p>
           </div>
         </div>
 
         <div class="menu-item" data-category="cuencos">
           <div class="menu-item-header">
-            <h3>Dulce Niebla</h3>
+            <h3 class="es">Dulce Niebla</h3>
+            <h3 class="en" style="display:none;">Sweet Mist</h3>
             <div class="price">$8.000</div>
           </div>
           <div class="menu-item-body">
-            <p>Miel de la sierra, almendra, azucar pulverizada</p>
+            <p class="es">Miel de la sierra, almendra, azucar pulverizada</p>
+            <p class="en" style="display:none;">Sierra honey, almond, powdered sugar</p>
           </div>
         </div>
 
         <div class="menu-item" data-category="cuencos">
           <div class="menu-item-header">
-            <h3>Flor del hongo</h3>
+            <h3 class="es">Flor del hongo</h3>
+            <h3 class="en" style="display:none;">Mushroom Flower</h3>
             <div class="price">$15.000</div>
           </div>
           <div class="menu-item-body">
-            <p>crema de quesos artesanales, rúgula fresca y setas doradas al fuego</p>
+            <p class="es">crema de quesos artesanales, rúgula fresca y setas doradas al fuego</p>
+            <p class="en" style="display:none;">artisanal cheese cream, fresh arugula and golden mushrooms roasted over fire</p>
           </div>
         </div>
 
         <div class="menu-item" data-category="cuencos">
           <div class="menu-item-header">
-            <h3>Sierra Dulce</h3>
+            <h3 class="es">Sierra Dulce</h3>
+            <h3 class="en" style="display:none;">Sweet Sierra</h3>
             <div class="price">$20.000</div>
           </div>
           <div class="menu-item-body">
-            <p>Burrata cremosa, tomates asados y pesto de pistacho artesanal</p>
+            <p class="es">Burrata cremosa, tomates asados y pesto de pistacho artesanal</p>
+            <p class="en" style="display:none;">Creamy burrata, roasted tomatoes and artisanal pistachio pesto</p>
           </div>
         </div>
 
         <div class="menu-item" data-category="cuencos">
           <div class="menu-item-header">
-            <h3>Flor de nube</h3>
+            <h3 class="es">Flor de nube</h3>
+            <h3 class="en" style="display:none;">Cloud Flower</h3>
             <div class="price">$12.000</div>
           </div>
           <div class="menu-item-body">
-            <p>Mermelada de guayaba, queso costeño</p>
+            <p class="es">Mermelada de guayaba, queso costeño</p>
+            <p class="en" style="display:none;">Guava jam, coastal cheese</p>
           </div>
         </div>
 
         <!-- Tribus -->
         <div class="menu-item" data-category="cuencos">
           <div class="menu-item-header">
-            <h3>Tribu Verde</h3>
+            <h3 class="es">Tribu Verde</h3>
+            <h3 class="en" style="display:none;">Green Tribe</h3>
             <div class="price">$11.000</div>
           </div>
           <div class="menu-item-body">
-            <p>Pistacho, almendra, semilla de girasol, miel de la sierra</p>
+            <p class="es">Pistacho, almendra, semilla de girasol, miel de la sierra</p>
+            <p class="en" style="display:none;">Pistachio, almond, sunflower seed, sierra honey</p>
           </div>
         </div>
 
         <div class="menu-item" data-category="cuencos">
           <div class="menu-item-header">
-            <h3>Huerto Vivo</h3>
+            <h3 class="es">Huerto Vivo</h3>
+            <h3 class="en" style="display:none;">Living Garden</h3>
             <div class="price">$15.000</div>
           </div>
           <div class="menu-item-body">
-            <p>Crema de quesos, rúgula, espinaca, oliva, albahaca, miel</p>
+            <p class="es">Crema de quesos, rúgula, espinaca, oliva, albahaca, miel</p>
+            <p class="en" style="display:none;">Cheese cream, arugula, spinach, olive, basil, honey</p>
           </div>
         </div>
 
         <div class="menu-item" data-category="cuencos">
           <div class="menu-item-header">
-            <h3>Frutaje de alba</h3>
+            <h3 class="es">Frutaje de alba</h3>
+            <h3 class="en" style="display:none;">Dawn Fruit Mix</h3>
             <div class="price">$15.000</div>
           </div>
           <div class="menu-item-body">
-            <p>coulis de frutos rojos, almendra, banano, arandanos</p>
+            <p class="es">coulis de frutos rojos, almendra, banano, arandanos</p>
+            <p class="en" style="display:none;">red fruit coulis, almond, banana, blueberries</p>
           </div>
         </div>
 
         <div class="menu-item" data-category="tribus">
           <div class="menu-item-header">
-            <h3>Frutaje del Alba</h3>
+            <h3 class="es">Frutaje del Alba</h3>
+            <h3 class="en" style="display:none;">Dawn Fruit Mix</h3>
             <div class="price">$10.000</div>
           </div>
           <div class="menu-item-body">
-            <p>coulis de frutos rojos, almendra, banano, arandanos</p>
+            <p class="es">coulis de frutos rojos, almendra, banano, arandanos</p>
+            <p class="en" style="display:none;">red fruit coulis, almond, banana, blueberries</p>
           </div>
         </div>
 
         <div class="menu-item" data-category="cuencos">
           <div class="menu-item-header">
-            <h3>Ritual Salado</h3>
+            <h3 class="es">Ritual Salado</h3>
+            <h3 class="en" style="display:none;">Savory Ritual</h3>
             <div class="price">$21.000</div>
           </div>
           <div class="menu-item-body">
-            <p>Queso ahumado, pistacho, almendra, balsamico de fresa</p>
+            <p class="es">Queso ahumado, pistacho, almendra, balsamico de fresa</p>
+            <p class="en" style="display:none;">Smoked cheese, pistachio, almond, strawberry balsamic</p>
           </div>
         </div>
 
         <div class="menu-item" data-category="cuencos">
           <div class="menu-item-header">
-            <h3>Mistico</h3>
+            <h3 class="es">Mistico</h3>
+            <h3 class="en" style="display:none;">Mystic</h3>
             <div class="price">$25.000</div>
           </div>
           <div class="menu-item-body">
-            <p>Jamón de cerdo ahumado, peras caramelizadas, chorizo vela, salami, queso suave costeño, queso ricotta, miel, albahaca.</p>
+            <p class="es">Jamón de cerdo ahumado, peras caramelizadas, chorizo vela, salami, queso suave costeño, queso ricotta, miel, albahaca.</p>
+            <p class="en" style="display:none;">Smoked pork ham, caramelized pears, chorizo, salami, soft coastal cheese, ricotta cheese, honey, basil.</p>
           </div>
         </div>
 
         <!-- Nidos de la Tierra Alta -->
         <div class="menu-item" data-category="nidos">
           <div class="menu-item-header">
-            <h3>Arhuaka – Tazón Ancestral de la Sierra</h3>
+            <h3 class="es">Arhuaka – Tazón Ancestral de la Sierra</h3>
+            <h3 class="en" style="display:none;">Arhuaka - Ancestral Bowl of the Sierra</h3>
             <div class="price">$16.000</div>
           </div>
           <div class="menu-item-body">
-            <p>Lechuga, rugula, espinaca, manzana, nues tostada, arandanos, queso ahumado, miel de la sierra.</p>
+            <p class="es">Lechuga, rugula, espinaca, manzana, nues tostada, arandanos, queso ahumado, miel de la sierra.</p>
+            <p class="en" style="display:none;">Lettuce, arugula, spinach, apple, toasted nuts, blueberries, smoked cheese, sierra honey.</p>
           </div>
         </div>
 
         <div class="menu-item" data-category="nidos">
           <div class="menu-item-header">
-            <h3>Seyneku - Memoria del agua</h3>
+            <h3 class="es">Seyneku - Memoria del agua</h3>
+            <h3 class="en" style="display:none;">Seyneku - Memory of water</h3>
             <div class="price">$19.000</div>
           </div>
           <div class="menu-item-body">
-            <p>Avena cocida con leche vegetal, banano, uchuva, miel de la sierra.</p>
+            <p class="es">Avena cocida con leche vegetal, banano, uchuva, miel de la sierra.</p>
+            <p class="en" style="display:none;">Oatmeal cooked with plant milk, banana, cape gooseberry, sierra honey.</p>
           </div>
         </div>
 
         <div class="menu-item" data-category="nidos">
           <div class="menu-item-header">
-            <h3>Kogui – Fuego del corazón</h3>
+            <h3 class="es">Kogui – Fuego del corazón</h3>
+            <h3 class="en" style="display:none;">Kogui - Fire of the heart</h3>
             <div class="price">$19.500</div>
           </div>
           <div class="menu-item-body">
-            <p>Base de arroz de coco con frijol cabecinegro, plátano maduro asado, maíz tostado, guacamole con limón mandarino y ají criollo.</p>
+            <p class="es">Base de arroz de coco con frijol cabecinegro, plátano maduro asado, maíz tostado, guacamole con limón mandarino y ají criollo.</p>
+            <p class="en" style="display:none;">Coconut rice base with black-eyed peas, roasted ripe plantain, toasted corn, guacamole with tangerine lime and creole chili.</p>
           </div>
         </div>
 
         <div class="menu-item" data-category="Nidos">
           <div class="menu-item-header">
-            <h3>Seynekun – Memoria del agua</h3>
+            <h3 class="es">Seynekun – Memoria del agua</h3>
+            <h3 class="en" style="display:none;">Seynekun - Memory of water</h3>
             <div class="price">$19.900</div>
           </div>
           <div class="menu-item-body">
-            <p>Avena cocida con leche vegetal, banano, uchuva, mora, miel de la sierra.</p>
+            <p class="es">Avena cocida con leche vegetal, banano, uchuva, mora, miel de la sierra.</p>
+            <p class="en" style="display:none;">Oatmeal cooked with plant milk, banana, cape gooseberry, blackberry, sierra honey.</p>
           </div>
         </div>
 
         <!-- Nidos de la Tierra Alta -->
         <div class="menu-item" data-category="nidos">
           <div class="menu-item-header">
-            <h3>Kankuaka – Tierra de setas</h3>
+            <h3 class="es">Kankuaka – Tierra de setas</h3>
+            <h3 class="en" style="display:none;">Kankuaka - Mushroom land</h3>
             <div class="price">$15.000</div>
           </div>
           <div class="menu-item-body">
-            <p>Puré de papa con mantequilla vegetal, Salsa de champiñones salteados al ajo, ensalada de rúgula y tomate cherry</p>
+            <p class="es">Puré de papa con mantequilla vegetal, Salsa de champiñones salteados al ajo, ensalada de rúgula y tomate cherry</p>
+            <p class="en" style="display:none;">Mashed potatoes with plant butter, sautéed mushroom sauce with garlic, arugula and cherry tomato salad</p>
           </div>
         </div>
 
         <div class="menu-item" data-category="nidos">
           <div class="menu-item-header">
-            <h3>Wiwa – Huerto de montaña</h3>
+            <h3 class="es">Wiwa – Huerto de montaña</h3>
+            <h3 class="en" style="display:none;">Wiwa - Mountain garden</h3>
             <div class="price">$18.000</div>
           </div>
           <div class="menu-item-body">
-            <p>Auyama majada y cayeye, coronado con hogao criollo, cebolla encurtida y queso costeño rallado.</p>
+            <p class="es">Auyama majada y cayeye, coronado con hogao criollo, cebolla encurtida y queso costeño rallado.</p>
+            <p class="en" style="display:none;">Mashed pumpkin and cayeye, topped with creole hogao, pickled onion and grated coastal cheese.</p>
           </div>
         </div>
 
         <!-- Altar del Fogón -->
         <div class="menu-item" data-category="altares">
           <div class="menu-item-header">
-            <h3>Crujido del fogón</h3>
+            <h3 class="es">Crujido del fogón</h3>
+            <h3 class="en" style="display:none;">Crackle of the stove</h3>
             <div class="price">$22.900</div>
           </div>
           <div class="menu-item-body">
-            <p>Chicharrón artesanal curado en jugo de limón con cebolla morada, ají dulce, cilantro. Servido sobre puré de papa con maíz tostado crocante y guacamole</p>
+            <p class="es">Chicharrón artesanal curado en jugo de limón con cebolla morada, ají dulce, cilantro. Servido sobre puré de papa con maíz tostado crocante y guacamole</p>
+            <p class="en" style="display:none;">Artisanal pork crackling cured in lemon juice with purple onion, sweet chili, cilantro. Served on mashed potatoes with crunchy toasted corn and guacamole</p>
           </div>
         </div>
 
         <div class="menu-item" data-category="altares">
           <div class="menu-item-header">
-            <h3>Sol de Ikarwa</h3>
+            <h3 class="es">Sol de Ikarwa</h3>
+            <h3 class="en" style="display:none;">Sun of Ikarwa</h3>
             <div class="price">$38.500</div>
           </div>
           <div class="menu-item-body">
-            <p>Salmón marinado con limón criollo y ajonjolí, sobre quinua dorada, aguacate y tomate cherry.</p>
+            <p class="es">Salmón marinado con limón criollo y ajonjolí, sobre quinua dorada, aguacate y tomate cherry.</p>
+            <p class="en" style="display:none;">Salmon marinated with creole lime and sesame, on golden quinoa, avocado and cherry tomato.</p>
           </div>
         </div>
 
         <div class="menu-item" data-category="altares">
           <div class="menu-item-header">
-            <h3>Guardián Kogi</h3>
+            <h3 class="es">Guardián Kogi</h3>
+            <h3 class="en" style="display:none;">Kogi Guardian</h3>
             <div class="price">$35.500</div>
           </div>
           <div class="menu-item-body">
-            <p>Solomito de res en salsa champiñon, papa al horno, ensalada fresca.</p>
+            <p class="es">Solomito de res en salsa champiñon, papa al horno, ensalada fresca.</p>
+            <p class="en" style="display:none;">Beef tenderloin in mushroom sauce, baked potato, fresh salad.</p>
           </div>
         </div>
 
         <div class="menu-item" data-category="altares">
           <div class="menu-item-header">
-            <h3>César de Fuego y Monte</h3>
+            <h3 class="es">César de Fuego y Monte</h3>
+            <h3 class="en" style="display:none;">Caesar of Fire and Mountain</h3>
             <div class="price">$37.000</div>
           </div>
           <div class="menu-item-body">
-            <p>Gordon Bleu artesanal sobre hojas frescas, quinoa, tomate cherry y queso curado. Servida con crocantes de pan y aliño de la casa.</p>
+            <p class="es">Gordon Bleu artesanal sobre hojas frescas, quinoa, tomate cherry y queso curado. Servida con crocantes de pan y aliño de la casa.</p>
+            <p class="en" style="display:none;">Artisanal Gordon Bleu on fresh leaves, quinoa, cherry tomato and aged cheese. Served with crunchy bread and house dressing.</p>
           </div>
         </div>
 
         <!-- Waffles sin Gluten -->
         <div class="menu-item" data-category="waffles">
           <div class="menu-item-header">
-            <h3>🌿Clásico Costeño</h3>
+            <h3 class="es">🌿Clásico Costeño</h3>
+            <h3 class="en" style="display:none;">🌿Coastal Classic</h3>
             <div class="price">$16.000</div>
           </div>
           <div class="menu-item-body">
-            <p>Waffle de maíz sin gluten, queso costeño rallado y miel de caña</p>
-            <span class="diet-tag">vegetariano</span>
+            <p class="es">Waffle de maíz sin gluten, queso costeño rallado y miel de caña</p>
+            <p class="en" style="display:none;">Gluten-free corn waffle, shredded coastal cheese and sugarcane honey</p>
+            <span class="diet-tag en" style="display:none;">vegetarian</span>
           </div>
         </div>
 
         <div class="menu-item" data-category="waffles">
           <div class="menu-item-header">
-            <h3>🌱Verde Mediterráneo</h3>
+            <h3 class="es">🌱Verde Mediterráneo</h3>
+            <h3 class="en" style="display:none;">🌱Mediterranean Green</h3>
             <div class="price">$15.500</div>
           </div>
           <div class="menu-item-body">
-            <p>Waffle de yuca, pesto casero, tomate cherry, rugula, semillas tostadas</p>
-            <span class="diet-tag">Vegano</span>
+            <p class="es">Waffle de yuca, pesto casero, tomate cherry, rugula, semillas tostadas</p>
+            <p class="en" style="display:none;">Cassava waffle, homemade pesto, cherry tomato, arugula, toasted seeds</p>
+            <span class="diet-tag en" style="display:none;">Vegan</span>
           </div>
         </div>
 
         <div class="menu-item" data-category="waffles">
           <div class="menu-item-header">
-            <h3>🌱Plátano& Coco</h3>
+            <h3 class="es">🌱Plátano& Coco</h3>
+            <h3 class="en" style="display:none;">🌱Banana & Coconut</h3>
             <div class="price">$16.000</div>
           </div>
           <div class="menu-item-body">
-            <p>Waffle de plátano maduro, fruta fresca, coco rallado, miel de la sierra</p>
-            <span class="diet-tag">Vegano</span>
+            <p class="es">Waffle de plátano maduro, fruta fresca, coco rallado, miel de la sierra</p>
+            <p class="en" style="display:none;">Ripe banana waffle, fresh fruit, shredded coconut, sierra honey</p>
+            <span class="diet-tag en" style="display:none;">Vegan</span>
           </div>
         </div>
 
         <div class="menu-item" data-category="waffles">
           <div class="menu-item-header">
-            <h3>🌿Dualidad Sagrada</h3>
+            <h3 class="es">🌿Dualidad Sagrada</h3>
+            <h3 class="en" style="display:none;">🌿Sacred Duality</h3>
             <div class="price">$23.000</div>
           </div>
           <div class="menu-item-body">
-            <p>Waffle de yuca, arandano, queso crema, crema de mani, almendras, jamon serrano, rugula, durazno</p>
-            <span class="diet-tag">Vegetariano</span>
+            <p class="es">Waffle de yuca, arandano, queso crema, crema de mani, almendras, jamon serrano, rugula, durazno</p>
+            <p class="en" style="display:none;">Cassava waffle, blueberry, cream cheese, peanut butter, almonds, serrano ham, arugula, peach</p>
+            <span class="diet-tag en" style="display:none;">Vegetarian</span>
           </div>
         </div>
 
         <div class="menu-item" data-category="waffles">
           <div class="menu-item-header">
-            <h3>🌿Sol De Abunué</h3>
+            <h3 class="es">🌿Sol De Abunué</h3>
+            <h3 class="en" style="display:none;">🌿Sun of Abunué</h3>
             <div class="price">$16.000</div>
           </div>
           <div class="menu-item-body">
-            <p>Waffle de avena, banano en rodajas, crema de maní y canela</p>
-            <span class="diet-tag">Vegetariano</span>
+            <p class="es">Waffle de avena, banano en rodajas, crema de maní y canela</p>
+            <p class="en" style="display:none;">Oat waffle, sliced banana, peanut butter and cinnamon</p>
+            <span class="diet-tag en" style="display:none;">Vegetarian</span>
           </div>
         </div>
 
         <!-- Bebidas -->
         <div class="menu-item" data-category="bebidas">
           <div class="menu-item-header">
-            <h3>Limonada de coco con menta</h3>
+            <h3 class="es">Limonada de coco con menta</h3>
+            <h3 class="en" style="display:none;">Coconut lemonade with mint</h3>
             <div class="price">$6.000</div>
           </div>
         </div>
 
         <div class="menu-item" data-category="bebidas">
           <div class="menu-item-header">
-            <h3>Limonada Natural</h3>
+            <h3 class="es">Limonada Natural</h3>
+            <h3 class="en" style="display:none;">Natural Lemonade</h3>
             <div class="price">$7.000</div>
           </div>
         </div>
 
         <div class="menu-item" data-category="bebidas">
           <div class="menu-item-header">
-            <h3>Jugo de maracuyá</h3>
+            <h3 class="es">Jugo de maracuyá</h3>
+            <h3 class="en" style="display:none;">Passion fruit juice</h3>
             <div class="price">$10.000</div>
           </div>
         </div>
 
         <div class="menu-item" data-category="bebidas">
           <div class="menu-item-header">
-            <h3>Limonada de hierbabuena</h3>
+            <h3 class="es">Limonada de hierbabuena</h3>
+            <h3 class="en" style="display:none;">Mint lemonade</h3>
             <div class="price">$9.500</div>
           </div>
         </div>
 
         <div class="menu-item" data-category="bebidas">
           <div class="menu-item-header">
-            <h3>Agua sin gas</h3>
+            <h3 class="es">Agua sin gas</h3>
+            <h3 class="en" style="display:none;">Still water</h3>
             <div class="price">$5.000</div>
           </div>
         </div>
 
         <div class="menu-item" data-category="bebidas">
           <div class="menu-item-header">
-            <h3>Agua con gas</h3>
+            <h3 class="es">Agua con gas</h3>
+            <h3 class="en" style="display:none;">Sparkling water</h3>
             <div class="price">$5.000</div>
           </div>
         </div>
 
         <div class="menu-item" data-category="bebidas">
           <div class="menu-item-header">
-            <h3>Jugo de piña con hierbabuena</h3>
+            <h3 class="es">Jugo de piña con hierbabuena</h3>
+            <h3 class="en" style="display:none;">Pineapple juice with mint</h3>
             <div class="price">$9.000</div>
           </div>
         </div>
 
         <div class="menu-item" data-category="bebidas">
           <div class="menu-item-header">
-            <h3>Bruma Frutal</h3>
+            <h3 class="es">Bruma Frutal</h3>
+            <h3 class="en" style="display:none;">Bruma Fruit</h3>
             <div class="price">$13.500</div>
           </div>
           <div class="menu-item-body">
-            <p>Banano, fresa, avena</p>
+            <p class="es">Banano, fresa, avena</p>
+            <p class="en" style="display:none;">Banana, strawberry, oat</p>
           </div>
         </div>
       </div>
@@ -914,9 +1017,13 @@
           <a href="https://www.instagram.com/bruma_cafeycroffle/" target="_blank"><i class="fab fa-instagram"></i></a>
           <a href="https://wa.me/573205712682" target="_blank"><i class="fab fa-whatsapp"></i></a>
         </div>
-        <p class="footer-text">
+        <p class="footer-text es">
           Bruma Café & Croffle es una cocina oculta que nace de lo ancestral, uniendo la sabiduría de la tierra con el arte del brunch. 
           Haz tu pedido y deja que la bruma llegue hasta ti.
+        </p>
+        <p class="footer-text en" style="display:none;">
+          Bruma Coffee & Croffle is a hidden kitchen born from the ancestral, uniting the wisdom of the earth with the art of brunch.
+          Place your order and let the mist reach you.
         </p>
         <p style="font-size: 0.9rem; opacity: 0.8;">
           &copy; 2023 Bruma Café & Croffle. Todos los derechos reservados.
@@ -926,18 +1033,50 @@
   </footer>
 
   <script>
-    // Filtrado de menú
+    // Language Switcher
     document.addEventListener('DOMContentLoaded', function() {
+      const langButtons = document.querySelectorAll('.lang-btn');
+      const esElements = document.querySelectorAll('.es');
+      const enElements = document.querySelectorAll('.en');
+      
+      langButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Update active button
+          langButtons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+          
+          const language = button.getAttribute('data-lang');
+          
+          // Show/hide elements based on language
+          if (language === 'es') {
+            esElements.forEach(el => {
+              el.style.display = 'block';
+            });
+            enElements.forEach(el => {
+              el.style.display = 'none';
+            });
+          } else {
+            esElements.forEach(el => {
+              el.style.display = 'none';
+            });
+            enElements.forEach(el => {
+              el.style.display = 'block';
+            });
+          }
+        });
+      });
+      
+      // Menu filtering
       const buttons = document.querySelectorAll('.menu-category-btn');
       const items = document.querySelectorAll('.menu-item');
 
       buttons.forEach(button => {
         button.addEventListener('click', () => {
-          // Actualizar botón activo
+          // Update active button
           buttons.forEach(btn => btn.classList.remove('active'));
           button.classList.add('active');
 
-          // Filtrar elementos
+          // Filter items
           const category = button.getAttribute('data-category');
           
           items.forEach(item => {
@@ -949,14 +1088,14 @@
           });
         });
       });
-    });
 
-    // Efecto de scroll suave
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
+      // Smooth scroll effect
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
         });
       });
     });
